@@ -12,7 +12,7 @@
 <body> <!-- Contains the visible content of the webpage -->
     <div class="page-container"> <!-- Main container for the page layout -->
         <div class="sidebar"> <!-- Left sidebar containing navigation tabs -->
-            <div class="tab active" onclick="showContent('digital')"> <!-- First tab, active by default, shows digital art content when clicked -->
+            <div class="tab" onclick="showContent('digital')"> <!-- First tab, shows digital art content when clicked -->
                 Digital Art
             </div>
             <div class="tab" onclick="showContent('traditional')"> <!-- Second tab, shows traditional art content when clicked -->
@@ -30,34 +30,93 @@
         </div> <!-- Closes the sidebar -->
         
         <div class="content"> <!-- Main content area where tab content is displayed -->
-            <div id="digital" class="content-section active"> <!-- Digital art section, visible by default -->
+            <div class="default-content"> <!-- Default message shown when no tab is selected -->
+                <p>Select a tab from the left to view content</p> <!-- Instructions for user interaction -->
+            </div>
+            
+            <div id="digital" class="content-section"> <!-- Digital art section, hidden by default -->
                 <h2>Digital Art</h2> <!-- Section heading -->
                 <p>Showcase your digital artwork, illustrations, and computer-generated art here.</p> <!-- Placeholder text for digital art content -->
                 <p>Include descriptions of techniques used, software, and inspiration behind each piece.</p> <!-- Additional guidance for digital art content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Digital Art Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Find digital art inspiration: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Digital Art Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Digital Art Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="traditional" class="content-section"> <!-- Traditional art section, hidden by default -->
                 <h2>Traditional Art</h2> <!-- Section heading -->
                 <p>Display your paintings, drawings, sculptures, and other traditional media artwork.</p> <!-- Placeholder text for traditional art content -->
                 <p>Describe the materials used, techniques employed, and artistic concepts explored.</p> <!-- Additional guidance for traditional art content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Traditional Art Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Explore traditional techniques: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Traditional Art Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Traditional Art Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="photography" class="content-section"> <!-- Photography section, hidden by default -->
                 <h2>Photography</h2> <!-- Section heading -->
                 <p>Present your photography portfolio including different styles and subjects.</p> <!-- Placeholder text for photography content -->
                 <p>Include information about camera settings, locations, and photographic techniques.</p> <!-- Additional guidance for photography content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Photography Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Photography tips and tricks: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Photography Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Photography Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="design" class="content-section"> <!-- Design section, hidden by default -->
                 <h2>Design Projects</h2> <!-- Section heading -->
                 <p>Feature your graphic design, web design, and other design-related projects.</p> <!-- Placeholder text for design content -->
                 <p>Explain the design process, client requirements, and creative solutions implemented.</p> <!-- Additional guidance for design content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Design Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Design inspiration and tools: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Design Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Design Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="exhibitions" class="content-section"> <!-- Exhibitions section, hidden by default -->
                 <h2>Exhibitions & Shows</h2> <!-- Section heading -->
                 <p>List art exhibitions, gallery shows, and public displays of your work.</p> <!-- Placeholder text for exhibitions content -->
                 <p>Include dates, venues, and any recognition or reviews received.</p> <!-- Additional guidance for exhibitions content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Exhibition Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Find exhibition opportunities: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Exhibition Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Exhibition Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
         </div> <!-- Closes the main content area -->
     </div> <!-- Closes the page container -->

@@ -12,7 +12,7 @@
 <body> <!-- Contains the visible content of the webpage -->
     <div class="page-container"> <!-- Main container for the page layout -->
         <div class="sidebar"> <!-- Left sidebar containing navigation tabs -->
-            <div class="tab active" onclick="showContent('education')"> <!-- First tab, active by default, shows education content when clicked -->
+            <div class="tab" onclick="showContent('education')"> <!-- First tab, shows education content when clicked -->
                 Education
             </div>
             <div class="tab" onclick="showContent('research')"> <!-- Second tab, shows research content when clicked -->
@@ -30,34 +30,93 @@
         </div> <!-- Closes the sidebar -->
         
         <div class="content"> <!-- Main content area where tab content is displayed -->
-            <div id="education" class="content-section active"> <!-- Education section, visible by default -->
+            <div class="default-content"> <!-- Default message shown when no tab is selected -->
+                <p>Select a tab from the left to view content</p> <!-- Instructions for user interaction -->
+            </div>
+            
+            <div id="education" class="content-section"> <!-- Education section, hidden by default -->
                 <h2>Education</h2> <!-- Section heading -->
                 <p>Add your educational background here. Include universities, degrees, graduation dates, and any relevant academic achievements.</p> <!-- Placeholder text for education content -->
                 <p>Example: Bachelor of Science in Computer Science, University Name, 2020-2024</p> <!-- Example format for education entries -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Useful Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Check out this helpful link: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Educational Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Educational Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="research" class="content-section"> <!-- Research section, hidden by default -->
                 <h2>Research</h2> <!-- Section heading -->
                 <p>Describe your research projects, methodologies, and findings here.</p> <!-- Placeholder text for research content -->
                 <p>Include any ongoing or completed research work, collaborations, and areas of interest.</p> <!-- Additional guidance for research content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Research Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Useful research tool: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Research Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Research Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="publications" class="content-section"> <!-- Publications section, hidden by default -->
                 <h2>Publications</h2> <!-- Section heading -->
                 <p>List your academic publications, papers, and articles here.</p> <!-- Placeholder text for publications content -->
                 <p>Include journal articles, conference papers, and any other scholarly work.</p> <!-- Additional guidance for publications content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Publication Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Search for publications: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Publication Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Publication Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="awards" class="content-section"> <!-- Awards section, hidden by default -->
                 <h2>Awards & Honors</h2> <!-- Section heading -->
                 <p>Showcase your academic awards, scholarships, and honors here.</p> <!-- Placeholder text for awards content -->
                 <p>Include dates, awarding institutions, and brief descriptions of achievements.</p> <!-- Additional guidance for awards content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Award Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Find award opportunities: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Award Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Award Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="courses" class="content-section"> <!-- Courses section, hidden by default -->
                 <h2>Relevant Courses</h2> <!-- Section heading -->
                 <p>List important courses you've taken that are relevant to your field.</p> <!-- Placeholder text for courses content -->
                 <p>Include course names, institutions, and key skills or knowledge gained.</p> <!-- Additional guidance for courses content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Course Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Find online courses: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Course Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Course Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
         </div> <!-- Closes the main content area -->
     </div> <!-- Closes the page container -->

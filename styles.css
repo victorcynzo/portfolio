@@ -68,7 +68,7 @@ body {
 
 /* Hover effect for navigation boxes */
 .nav-box:hover {
-    transform: scale(1.05); /* Enlarges the box by 5% when hovered */
+    transform: scale(1.1); /* Enlarges the box by 10% when hovered */
     border-color: #555; /* Changes border to a lighter grey on hover */
     background-color: #111; /* Slightly lightens the background on hover */
 }
@@ -106,7 +106,10 @@ body {
 .tab:hover {
     transform: scale(1.1); /* Enlarges tab by 10% when hovered */
     background-color: #333; /* Lightens background color on hover */
-    margin-right: -10px; /* Extends the tab slightly to the right when enlarged */
+    transform-origin: left center; /* Sets the scaling origin to prevent cutoff */
+    margin-right: -30px; /* Extends the tab to the right to accommodate full enlargement */
+    z-index: 10; /* Brings hovered tab above others to prevent overlap issues */
+    position: relative; /* Enables z-index positioning */
 }
 
 /* Active tab styling */
@@ -132,6 +135,21 @@ body {
 /* Active content section */
 .content-section.active {
     display: block; /* Shows the active content section */
+}
+
+/* Default message when no tab is selected */
+.default-content {
+    display: block; /* Shows the default message */
+    text-align: center; /* Centers the default message */
+    color: #666; /* Sets a dimmed color for the default message */
+    font-style: italic; /* Makes the default message italic */
+    margin-top: 100px; /* Adds space from the top */
+}
+
+/* Hide default content when any tab is active */
+.content-section.active ~ .default-content,
+.content-section.active + .default-content {
+    display: none; /* Hides default content when a tab is selected */
 }
 
 /* Fade-in animation for content */
@@ -179,4 +197,64 @@ body {
     .content { /* Adjusts content padding for mobile */
         padding: 20px; /* Reduces padding for smaller screens */
     }
+}
+/
+* Styling for embedded content */
+.embedded-content {
+    margin: 30px 0; /* Adds vertical spacing around embedded content */
+    padding: 20px; /* Adds padding inside the content area */
+    border: 1px solid #333; /* Adds a subtle border around embedded content */
+    border-radius: 8px; /* Rounds the corners */
+    background-color: #111; /* Slightly lighter background for embedded content */
+}
+
+/* Styling for embedded links */
+.embedded-content a {
+    color: #4a9eff; /* Sets link color to a light blue */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: 400; /* Sets normal font weight */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for embedded links */
+.embedded-content a:hover {
+    color: #66b3ff; /* Lightens link color on hover */
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Styling for embedded images */
+.embedded-content img {
+    max-width: 100%; /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px; /* Slightly rounds image corners */
+    margin: 15px 0; /* Adds vertical spacing around images */
+    display: block; /* Makes images block elements */
+}
+
+/* Styling for YouTube video embeds */
+.embedded-content iframe {
+    width: 100%; /* Makes video responsive */
+    height: 315px; /* Sets standard YouTube embed height */
+    border: none; /* Removes default iframe border */
+    border-radius: 8px; /* Rounds video corners */
+    margin: 15px 0; /* Adds vertical spacing around videos */
+}
+
+/* Responsive video container */
+.video-container {
+    position: relative; /* Enables responsive positioning */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0; /* Sets height to 0 for responsive behavior */
+    overflow: hidden; /* Hides overflow content */
+    margin: 15px 0; /* Adds vertical spacing */
+}
+
+/* Responsive video iframe */
+.video-container iframe {
+    position: absolute; /* Positions video absolutely within container */
+    top: 0; /* Aligns to top */
+    left: 0; /* Aligns to left */
+    width: 100%; /* Takes full container width */
+    height: 100%; /* Takes full container height */
+    margin: 0; /* Removes margin for absolute positioning */
 }

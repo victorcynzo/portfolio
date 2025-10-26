@@ -12,7 +12,7 @@
 <body> <!-- Contains the visible content of the webpage -->
     <div class="page-container"> <!-- Main container for the page layout -->
         <div class="sidebar"> <!-- Left sidebar containing navigation tabs -->
-            <div class="tab active" onclick="showContent('about')"> <!-- First tab, active by default, shows about content when clicked -->
+            <div class="tab" onclick="showContent('about')"> <!-- First tab, shows about content when clicked -->
                 About Me
             </div>
             <div class="tab" onclick="showContent('interests')"> <!-- Second tab, shows interests content when clicked -->
@@ -30,34 +30,93 @@
         </div> <!-- Closes the sidebar -->
         
         <div class="content"> <!-- Main content area where tab content is displayed -->
-            <div id="about" class="content-section active"> <!-- About section, visible by default -->
+            <div class="default-content"> <!-- Default message shown when no tab is selected -->
+                <p>Select a tab from the left to view content</p> <!-- Instructions for user interaction -->
+            </div>
+            
+            <div id="about" class="content-section"> <!-- About section, hidden by default -->
                 <h2>About Me</h2> <!-- Section heading -->
                 <p>Write a personal introduction about yourself, your background, and what drives you.</p> <!-- Placeholder text for about content -->
                 <p>Share your story, personality, and what makes you unique as an individual.</p> <!-- Additional guidance for about content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Personal Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Learn more about me: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Personal Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Personal Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="interests" class="content-section"> <!-- Interests section, hidden by default -->
                 <h2>Interests & Hobbies</h2> <!-- Section heading -->
                 <p>Describe your personal interests, hobbies, and activities you enjoy outside of work or studies.</p> <!-- Placeholder text for interests content -->
                 <p>Include both creative pursuits and recreational activities that shape who you are.</p> <!-- Additional guidance for interests content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Interest Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Explore similar interests: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Interest Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Interest Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="skills" class="content-section"> <!-- Skills section, hidden by default -->
                 <h2>Skills & Abilities</h2> <!-- Section heading -->
                 <p>List your technical skills, soft skills, and competencies.</p> <!-- Placeholder text for skills content -->
                 <p>Include programming languages, tools, creative abilities, and interpersonal skills.</p> <!-- Additional guidance for skills content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Skill Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Develop new skills: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Skill Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Skill Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="experience" class="content-section"> <!-- Experience section, hidden by default -->
                 <h2>Work Experience</h2> <!-- Section heading -->
                 <p>Detail your professional experience, internships, and relevant work history.</p> <!-- Placeholder text for experience content -->
                 <p>Include job titles, companies, dates, and key responsibilities or achievements.</p> <!-- Additional guidance for experience content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Experience Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Career development tips: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Experience Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Experience Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
             
             <div id="contact" class="content-section"> <!-- Contact section, hidden by default -->
                 <h2>Contact Information</h2> <!-- Section heading -->
                 <p>Provide ways for people to get in touch with you.</p> <!-- Placeholder text for contact content -->
                 <p>Include email, social media links, and any other preferred contact methods.</p> <!-- Additional guidance for contact content -->
+                
+                <div class="embedded-content"> <!-- Container for embedded content -->
+                    <h3>Contact Resources</h3> <!-- Subheading for embedded content -->
+                    <p>Professional networking: <a href="https://www.google.com/" target="_blank">Google Search</a></p> <!-- Embedded Google link -->
+                    
+                    <img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fk9wl9ypumyp31.png" alt="Contact Resource Image" /> <!-- Embedded image from Reddit -->
+                    
+                    <div class="video-container"> <!-- Responsive container for YouTube video -->
+                        <iframe src="https://www.youtube.com/embed/oJZmO5mByVY" title="Contact Video" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                    </div>
+                </div>
             </div>
         </div> <!-- Closes the main content area -->
     </div> <!-- Closes the page container -->

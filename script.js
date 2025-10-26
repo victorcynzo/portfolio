@@ -16,6 +16,12 @@ function showContent(contentId) { // Takes the ID of the content section to disp
         tab.classList.remove('active'); // Removes the 'active' class from the tab
     });
     
+    // Hide the default content message
+    const defaultContent = document.querySelector('.default-content'); // Gets the default content message
+    if (defaultContent) { // Checks if default content exists
+        defaultContent.style.display = 'none'; // Hides the default content message
+    }
+    
     // Show the selected content section
     const targetContent = document.getElementById(contentId); // Gets the content section with the specified ID
     if (targetContent) { // Checks if the content section exists
@@ -46,12 +52,9 @@ document.addEventListener('DOMContentLoaded', function() { // Runs when the HTML
         });
     });
     
-    // Ensure the first tab and content are active on page load
-    const firstTab = document.querySelector('.tab'); // Gets the first tab element
-    const firstContent = document.querySelector('.content-section'); // Gets the first content section
-    
-    if (firstTab && firstContent) { // Checks if both elements exist
-        firstTab.classList.add('active'); // Adds active class to the first tab
-        firstContent.classList.add('active'); // Adds active class to the first content section
+    // Ensure default content is shown on page load (no tabs active initially)
+    const defaultContent = document.querySelector('.default-content'); // Gets the default content message
+    if (defaultContent) { // Checks if default content exists
+        defaultContent.style.display = 'block'; // Shows the default content message
     }
 });
