@@ -1,5 +1,5 @@
 // Function to show content based on the clicked tab
-function showContent(contentId) { // Takes the ID of the content section to display
+function showContent(contentId, clickedElement) { // Takes the ID of the content section to display and the clicked element
     // Get all content sections on the page
     const contentSections = document.querySelectorAll('.content-section'); // Selects all elements with 'content-section' class
     
@@ -29,8 +29,9 @@ function showContent(contentId) { // Takes the ID of the content section to disp
     }
     
     // Add active class to the clicked tab
-    const clickedTab = event.target; // Gets the tab that was clicked
-    clickedTab.classList.add('active'); // Adds 'active' class to highlight the clicked tab
+    if (clickedElement) { // Checks if clicked element is provided
+        clickedElement.classList.add('active'); // Adds 'active' class to highlight the clicked tab
+    }
 }
 
 // Wait for the page to fully load before running any code
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() { // Runs when the HTML
     // Add click event listeners to all tabs
     const tabs = document.querySelectorAll('.tab'); // Selects all tab elements
     tabs.forEach(tab => { // Loops through each tab
-        tab.addEventListener('click', function() { // Adds a click event listener to each tab
+        tab.addEventListener('click', function(event) { // Adds a click event listener to each tab with event parameter
             // Get the content ID from the onclick attribute or data attribute
             const onclickAttr = this.getAttribute('onclick'); // Gets the onclick attribute value
             if (onclickAttr) { // Checks if onclick attribute exists
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() { // Runs when the HTML
                 const match = onclickAttr.match(/showContent\('(.+)'\)/); // Uses regex to extract the content ID
                 if (match) { // Checks if a match was found
                     const contentId = match[1]; // Gets the content ID from the regex match
-                    showContent(contentId); // Calls the showContent function with the extracted ID
+                    showContent(contentId, this); // Calls the showContent function with the extracted ID and clicked element
                 }
             }
         });

@@ -1,260 +1,470 @@
 /* Reset default browser styles and set base font */
 * {
-    margin: 0; /* Removes default margin from all elements */
-    padding: 0; /* Removes default padding from all elements */
-    box-sizing: border-box; /* Makes padding and border included in element's total width and height */
+    margin: 0;
+    /* Removes default margin from all elements */
+    padding: 0;
+    /* Removes default padding from all elements */
+    box-sizing: border-box;
+    /* Makes padding and border included in element's total width and height */
 }
 
 /* Set the font family for the entire document */
 body {
-    font-family: 'JetBrains Mono', monospace; /* Sets JetBrains Mono as the primary font with monospace fallback */
-    background-color: black; /* Sets the background color to black */
-    color: white; /* Sets the default text color to white */
-    height: 100vh; /* Makes the body take up the full viewport height */
-    overflow: hidden; /* Prevents scrollbars from appearing */
+    font-family: 'JetBrains Mono', monospace;
+    /* Sets JetBrains Mono as the primary font with monospace fallback */
+    background-color: black;
+    /* Sets the background color to black */
+    color: white;
+    /* Sets the default text color to white */
+    height: 100vh;
+    /* Makes the body take up the full viewport height */
+    overflow: hidden;
+    /* Prevents scrollbars from appearing */
 }
 
 /* Main container that centers content */
 .container {
-    display: flex; /* Uses flexbox layout */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100vh; /* Takes up full viewport height */
-    width: 100vw; /* Takes up full viewport width */
+    display: flex;
+    /* Uses flexbox layout */
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    height: 100vh;
+    /* Takes up full viewport height */
+    width: 100vw;
+    /* Takes up full viewport width */
 }
 
 /* The central black square with border */
 .main-square {
-    background-color: black; /* Sets background to black */
-    border: 3px solid #333; /* Creates a dark grey border that's 3 pixels thick */
-    padding: 60px; /* Adds 60 pixels of space inside the square */
-    border-radius: 10px; /* Rounds the corners slightly */
-    text-align: center; /* Centers all text inside */
-    min-width: 500px; /* Sets minimum width to prevent square from being too small */
-    min-height: 400px; /* Sets minimum height to maintain square proportions */
+    background-color: black;
+    /* Sets background to black */
+    border: 12px solid #222;
+    /* Creates a very thick darker grey border that's 12 pixels thick */
+    padding: 60px;
+    /* Adds 60 pixels of space inside the square */
+    border-radius: 0;
+    /* Removes rounded corners for sharp 90-degree edges */
+    text-align: center;
+    /* Centers all text inside */
+    min-width: 500px;
+    /* Sets minimum width to prevent square from being too small */
+    min-height: 400px;
+    /* Sets minimum height to maintain square proportions */
+    display: flex;
+    /* Uses flexbox layout for better vertical centering */
+    flex-direction: column;
+    /* Stacks content vertically */
+    justify-content: center;
+    /* Centers content vertically within the box */
+    align-items: center;
+    /* Centers content horizontally within the box */
 }
 
 /* Styling for the name heading */
 .name {
-    font-size: 2.5rem; /* Sets font size to 2.5 times the root element size */
-    font-weight: 500; /* Sets font weight to medium */
-    margin-bottom: 50px; /* Adds 50 pixels of space below the name */
-    letter-spacing: 1px; /* Adds 1 pixel of space between letters */
+    font-size: 2.5rem;
+    /* Sets font size to 2.5 times the root element size */
+    font-weight: 500;
+    /* Sets font weight to medium */
+    margin-bottom: 50px;
+    /* Adds 50 pixels of space below the name */
+    letter-spacing: 1px;
+    /* Adds 1 pixel of space between letters */
 }
 
 /* Container for the three navigation boxes */
 .navigation-boxes {
-    display: flex; /* Uses flexbox layout */
-    justify-content: space-between; /* Distributes boxes evenly with space between them */
-    gap: 30px; /* Adds 30 pixels of space between each box */
+    display: flex;
+    /* Uses flexbox layout */
+    justify-content: space-between;
+    /* Distributes boxes evenly with space between them */
+    gap: 30px;
+    /* Adds 30 pixels of space between each box */
 }
 
 /* Individual navigation box styling */
 .nav-box {
-    background-color: black; /* Sets background to black */
-    border: 2px solid #333; /* Creates a thin dark grey border */
-    padding: 30px 20px; /* Adds 30px top/bottom padding and 20px left/right padding */
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* Sets text color to white */
-    border-radius: 8px; /* Rounds the corners */
-    transition: all 0.3s ease; /* Smooth transition for hover effects lasting 0.3 seconds */
-    flex: 1; /* Makes each box take equal width */
-    display: flex; /* Uses flexbox for centering text */
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
-    min-height: 80px; /* Sets minimum height for consistent box sizes */
-    font-weight: 400; /* Sets normal font weight */
+    background-color: black;
+    /* Sets background to black */
+    border: 2px solid #222;
+    /* Creates a thin darker grey border */
+    padding: 30px 20px;
+    /* Adds 30px top/bottom padding and 20px left/right padding */
+    text-decoration: none;
+    /* Removes underline from links */
+    color: white;
+    /* Sets text color to white */
+    border-radius: 0;
+    /* Removes rounded corners for sharp 90-degree edges */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects lasting 0.3 seconds */
+    flex: 1;
+    /* Makes each box take equal width */
+    display: flex;
+    /* Uses flexbox for centering text */
+    align-items: center;
+    /* Centers text vertically */
+    justify-content: center;
+    /* Centers text horizontally */
+    min-height: 80px;
+    /* Sets minimum height for consistent box sizes */
+    min-width: 120px;
+    /* Sets minimum width to ensure all boxes are the same size */
+    font-weight: 400;
+    /* Sets normal font weight */
 }
 
 /* Hover effect for navigation boxes */
 .nav-box:hover {
-    transform: scale(1.1); /* Enlarges the box by 10% when hovered */
-    border-color: #555; /* Changes border to a lighter grey on hover */
-    background-color: #111; /* Slightly lightens the background on hover */
+    transform: scale(1.1);
+    /* Enlarges the box by 10% when hovered */
+    border-color: #444;
+    /* Changes border to a lighter grey on hover */
+    background-color: #111;
+    /* Slightly lightens the background on hover */
 }
 
 /* Styling for content pages (academics, art, me) */
 .page-container {
-    display: flex; /* Uses flexbox layout */
-    height: 100vh; /* Takes up full viewport height */
-    background-color: black; /* Sets background to black */
+    display: flex;
+    /* Uses flexbox layout */
+    height: 100vh;
+    /* Takes up full viewport height */
+    background-color: black;
+    /* Sets background to black */
+    overflow: hidden;
+    /* Prevents page-level scrollbars */
+    position: relative;
+    /* Enables proper positioning for child elements */
 }
 
 /* Left sidebar containing the tabs */
 .sidebar {
-    width: 300px; /* Sets fixed width for the sidebar */
-    background-color: black; /* Sets background to black */
-    padding: 20px 0; /* Adds 20px padding top and bottom, no left/right padding */
-    overflow-y: auto; /* Allows vertical scrolling if content overflows */
+    width: 300px;
+    /* Sets fixed width for the sidebar */
+    background-color: black;
+    /* Sets background to black */
+    padding: 20px 0 20px 0;
+    /* Adds 20px padding top and bottom, no left/right padding */
+    overflow: visible;
+    /* Allows tabs to extend beyond sidebar boundaries when hovered */
+    display: flex;
+    /* Uses flexbox layout for better tab positioning */
+    flex-direction: column;
+    /* Stacks tabs vertically */
+    position: relative;
+    /* Enables positioning for overflow handling */
 }
 
 /* Individual tab styling */
 .tab {
-    background-color: #222; /* Sets dark grey background */
-    color: white; /* Sets text color to white */
-    padding: 20px 25px; /* Adds 20px top/bottom and 25px left/right padding */
-    margin-bottom: 15px; /* Adds 15px space below each tab */
-    border-radius: 0 15px 15px 0; /* Rounds only the right corners, left side stays flat */
-    cursor: pointer; /* Changes cursor to pointer when hovering */
-    transition: all 0.3s ease; /* Smooth transition for animations lasting 0.3 seconds */
-    border-left: none; /* Removes left border so tab hugs the screen edge */
-    font-weight: 400; /* Sets normal font weight */
-    user-select: none; /* Prevents text selection when clicking */
+    background-color: #222;
+    /* Sets dark grey background */
+    color: white;
+    /* Sets text color to white */
+    padding: 20px 25px;
+    /* Adds 20px top/bottom and 25px left/right padding */
+    margin-bottom: 15px;
+    /* Adds 15px space below each tab */
+    border-radius: 0 15px 15px 0;
+    /* Rounds only the right corners, left side stays flat */
+    cursor: pointer;
+    /* Changes cursor to pointer when hovering */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Smooth transition with custom easing */
+    border-left: none;
+    /* Removes left border so tab hugs the screen edge */
+    font-weight: 400;
+    /* Sets normal font weight */
+    user-select: none;
+    /* Prevents text selection when clicking */
+    position: relative;
+    /* Enables positioning for z-index */
+    transform-origin: left center;
+    /* Sets scaling origin to left center to preserve rounded edges */
 }
 
 /* Hover effect for tabs */
 .tab:hover {
-    transform: scale(1.1); /* Enlarges tab by 10% when hovered */
-    background-color: #333; /* Lightens background color on hover */
-    transform-origin: left center; /* Sets the scaling origin to prevent cutoff */
-    margin-right: -30px; /* Extends the tab to the right to accommodate full enlargement */
-    z-index: 10; /* Brings hovered tab above others to prevent overlap issues */
-    position: relative; /* Enables z-index positioning */
+    transform: scaleX(1.25) scaleY(1.5);
+    /* Enlarges tab width by 25% and height by 50% when hovered */
+    background-color: #333;
+    /* Lightens background color on hover */
+    z-index: 10;
+    /* Brings hovered tab above others to prevent overlap issues */
+    padding-left: 40px;
+    /* Moves text further to the right when hovered */
 }
 
 /* Active tab styling */
 .tab.active {
-    background-color: #444; /* Sets lighter background for active tab */
-    border-right: 3px solid #666; /* Adds right border to indicate active state */
+    background-color: #444;
+    /* Sets lighter background for active tab */
+    border-right: 3px solid #666;
+    /* Adds right border to indicate active state */
 }
 
 /* Main content area */
 .content {
-    flex: 1; /* Takes up remaining space after sidebar */
-    padding: 40px; /* Adds 40px padding on all sides */
-    background-color: black; /* Sets background to black */
-    overflow-y: auto; /* Allows vertical scrolling if content overflows */
+    flex: 1;
+    /* Takes up remaining space after sidebar */
+    padding: 40px;
+    /* Adds 40px padding on all sides */
+    background-color: black;
+    /* Sets background to black */
+    overflow-y: auto;
+    /* Allows vertical scrolling if content overflows */
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+    position: relative;
+    /* Enables proper positioning */
 }
 
 /* Content sections (hidden by default) */
 .content-section {
-    display: none; /* Hides all content sections by default */
-    animation: fadeIn 0.5s ease-in; /* Applies fade-in animation when shown */
+    display: none;
+    /* Hides all content sections by default */
+    animation: fadeIn 0.5s ease-in;
+    /* Applies fade-in animation when shown */
 }
 
 /* Active content section */
 .content-section.active {
-    display: block; /* Shows the active content section */
+    display: block;
+    /* Shows the active content section */
 }
 
 /* Default message when no tab is selected */
 .default-content {
-    display: block; /* Shows the default message */
-    text-align: center; /* Centers the default message */
-    color: #666; /* Sets a dimmed color for the default message */
-    font-style: italic; /* Makes the default message italic */
-    margin-top: 100px; /* Adds space from the top */
+    display: block;
+    /* Shows the default message */
+    text-align: center;
+    /* Centers the default message */
+    color: #666;
+    /* Sets a dimmed color for the default message */
+    font-style: italic;
+    /* Makes the default message italic */
+    margin-top: 100px;
+    /* Adds space from the top */
 }
 
 /* Hide default content when any tab is active */
-.content-section.active ~ .default-content,
-.content-section.active + .default-content {
-    display: none; /* Hides default content when a tab is selected */
+.content-section.active~.default-content,
+.content-section.active+.default-content {
+    display: none;
+    /* Hides default content when a tab is selected */
 }
 
 /* Fade-in animation for content */
 @keyframes fadeIn {
-    from { opacity: 0; } /* Starts completely transparent */
-    to { opacity: 1; } /* Ends completely opaque */
+    from {
+        opacity: 0;
+    }
+
+    /* Starts completely transparent */
+    to {
+        opacity: 1;
+    }
+
+    /* Ends completely opaque */
 }
 
 /* Heading styles for content sections */
 .content h2 {
-    font-size: 2rem; /* Sets large font size for headings */
-    margin-bottom: 20px; /* Adds space below headings */
-    color: white; /* Ensures headings are white */
-    font-weight: 500; /* Sets medium font weight */
+    font-size: 2rem;
+    /* Sets large font size for headings */
+    margin-bottom: 20px;
+    /* Adds space below headings */
+    color: white;
+    /* Ensures headings are white */
+    font-weight: 500;
+    /* Sets medium font weight */
 }
 
 /* Paragraph styles for content */
 .content p {
-    line-height: 1.6; /* Sets line height for better readability */
-    margin-bottom: 15px; /* Adds space below paragraphs */
-    color: white; /* Ensures paragraphs are white */
-    font-weight: 300; /* Sets light font weight for body text */
+    line-height: 1.6;
+    /* Sets line height for better readability */
+    margin-bottom: 15px;
+    /* Adds space below paragraphs */
+    color: white;
+    /* Ensures paragraphs are white */
+    font-weight: 300;
+    /* Sets light font weight for body text */
 }
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    .main-square { /* Adjusts main square for mobile */
-        min-width: 90%; /* Makes square responsive to screen width */
-        padding: 40px 20px; /* Reduces padding for smaller screens */
+    .main-square {
+        /* Adjusts main square for mobile */
+        min-width: 90%;
+        /* Makes square responsive to screen width */
+        padding: 40px 20px;
+        /* Reduces padding for smaller screens */
     }
-    
-    .navigation-boxes { /* Adjusts navigation for mobile */
-        flex-direction: column; /* Stacks boxes vertically on small screens */
-        gap: 20px; /* Reduces gap between boxes */
+
+    .navigation-boxes {
+        /* Adjusts navigation for mobile */
+        flex-direction: column;
+        /* Stacks boxes vertically on small screens */
+        gap: 20px;
+        /* Reduces gap between boxes */
     }
-    
-    .name { /* Adjusts name size for mobile */
-        font-size: 2rem; /* Reduces font size for smaller screens */
+
+    .name {
+        /* Adjusts name size for mobile */
+        font-size: 2rem;
+        /* Reduces font size for smaller screens */
     }
-    
-    .sidebar { /* Adjusts sidebar for mobile */
-        width: 250px; /* Makes sidebar narrower on small screens */
+
+    .sidebar {
+        /* Adjusts sidebar for mobile */
+        width: 250px;
+        /* Makes sidebar narrower on small screens */
     }
-    
-    .content { /* Adjusts content padding for mobile */
-        padding: 20px; /* Reduces padding for smaller screens */
+
+    .content {
+        /* Adjusts content padding for mobile */
+        padding: 20px;
+        /* Reduces padding for smaller screens */
     }
 }
-/
-* Styling for embedded content */
+
+/* Styling for embedded content */
 .embedded-content {
-    margin: 30px 0; /* Adds vertical spacing around embedded content */
-    padding: 20px; /* Adds padding inside the content area */
-    border: 1px solid #333; /* Adds a subtle border around embedded content */
-    border-radius: 8px; /* Rounds the corners */
-    background-color: #111; /* Slightly lighter background for embedded content */
+    margin: 30px 0;
+    /* Adds vertical spacing around embedded content */
+    padding: 20px;
+    /* Adds padding inside the content area */
+    border: 1px solid #333;
+    /* Adds a subtle border around embedded content */
+    border-radius: 8px;
+    /* Rounds the corners */
+    background-color: #111;
+    /* Slightly lighter background for embedded content */
 }
 
 /* Styling for embedded links */
 .embedded-content a {
-    color: #4a9eff; /* Sets link color to a light blue */
-    text-decoration: none; /* Removes underline from links */
-    font-weight: 400; /* Sets normal font weight */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    color: #4a9eff;
+    /* Sets link color to a light blue */
+    text-decoration: none;
+    /* Removes underline from links */
+    font-weight: 400;
+    /* Sets normal font weight */
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
 }
 
 /* Hover effect for embedded links */
 .embedded-content a:hover {
-    color: #66b3ff; /* Lightens link color on hover */
-    text-decoration: underline; /* Adds underline on hover */
+    color: #66b3ff;
+    /* Lightens link color on hover */
+    text-decoration: underline;
+    /* Adds underline on hover */
 }
 
 /* Styling for embedded images */
 .embedded-content img {
-    max-width: 100%; /* Makes images responsive */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 5px; /* Slightly rounds image corners */
-    margin: 15px 0; /* Adds vertical spacing around images */
-    display: block; /* Makes images block elements */
+    max-width: 100%;
+    /* Makes images responsive */
+    height: auto;
+    /* Maintains aspect ratio */
+    border-radius: 5px;
+    /* Slightly rounds image corners */
+    margin: 15px 0;
+    /* Adds vertical spacing around images */
+    display: block;
+    /* Makes images block elements */
 }
 
 /* Styling for YouTube video embeds */
 .embedded-content iframe {
-    width: 100%; /* Makes video responsive */
-    height: 315px; /* Sets standard YouTube embed height */
-    border: none; /* Removes default iframe border */
-    border-radius: 8px; /* Rounds video corners */
-    margin: 15px 0; /* Adds vertical spacing around videos */
+    width: 100%;
+    /* Makes video responsive */
+    height: 315px;
+    /* Sets standard YouTube embed height */
+    border: none;
+    /* Removes default iframe border */
+    border-radius: 8px;
+    /* Rounds video corners */
+    margin: 15px 0;
+    /* Adds vertical spacing around videos */
 }
 
 /* Responsive video container */
 .video-container {
-    position: relative; /* Enables responsive positioning */
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0; /* Sets height to 0 for responsive behavior */
-    overflow: hidden; /* Hides overflow content */
-    margin: 15px 0; /* Adds vertical spacing */
+    position: relative;
+    /* Enables responsive positioning */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    /* Sets height to 0 for responsive behavior */
+    overflow: hidden;
+    /* Hides overflow content */
+    margin: 15px 0;
+    /* Adds vertical spacing */
 }
 
 /* Responsive video iframe */
 .video-container iframe {
-    position: absolute; /* Positions video absolutely within container */
-    top: 0; /* Aligns to top */
-    left: 0; /* Aligns to left */
-    width: 100%; /* Takes full container width */
-    height: 100%; /* Takes full container height */
-    margin: 0; /* Removes margin for absolute positioning */
+    position: absolute;
+    /* Positions video absolutely within container */
+    top: 0;
+    /* Aligns to top */
+    left: 0;
+    /* Aligns to left */
+    width: 100%;
+    /* Takes full container width */
+    height: 100%;
+    /* Takes full container height */
+    margin: 0;
+    /* Removes margin for absolute positioning */
+}
+
+/* Dynamic spacing system for tabs */
+
+/* When hovering over sidebar, prepare all tabs for dynamic spacing */
+.sidebar:hover .tab {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Smooth transition for all tabs */
+}
+
+/* Push tabs below the hovered tab down to maintain consistent spacing */
+.tab:hover~.tab {
+    transform: translateY(20px);
+    /* Moves subsequent tabs down by 20px to accommodate enlarged tab */
+}
+
+/* Ensure consistent spacing by adjusting the hovered tab's position */
+.tab:hover {
+    margin-top: 10px;
+    /* Slight adjustment to maintain visual balance */
+    margin-bottom: 25px;
+    /* Increased bottom margin to create space for the enlarged tab */
+}
+
+/* Home t
+ab styling with extra spacing */
+.home-tab {
+    margin-top: 60px;
+    /* Adds much more space above the home tab (equivalent to space for two tabs) */
+    background-color: #1a1a1a;
+    /* Slightly different background to distinguish it as a navigation tab */
+    border-right: 2px solid #444;
+    /* Adds a subtle right border to make it stand out */
+}
+
+/* Home tab hover effect */
+.home-tab:hover {
+    background-color: #2a2a2a;
+    /* Different hover color for the home tab */
+    border-right-color: #666;
+    /* Lightens the right border on hover */
+    margin-top: 60px;
+    /* Maintains the same top margin when hovered to keep consistent spacing */
+    margin-bottom: 15px;
+    /* Maintains the same bottom margin when hovered */
 }
