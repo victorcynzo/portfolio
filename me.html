@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- Declares this as an HTML5 document -->
+<html lang="en"> <!-- Opens the HTML document with English language attribute -->
+<head> <!-- Contains metadata about the document -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site responsive on mobile devices -->
+    <title>About Me - Victor Cornbert IJnzonides</title> <!-- Sets the browser tab title -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to the external CSS file for styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnects to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to Google Fonts static content -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- Imports JetBrains Mono font from Google Fonts -->
+</head>
+<body> <!-- Contains the visible content of the webpage -->
+    <div class="page-container"> <!-- Main container for the page layout -->
+        <div class="sidebar"> <!-- Left sidebar containing navigation tabs -->
+            <div class="tab active" onclick="showContent('about')"> <!-- First tab, active by default, shows about content when clicked -->
+                About Me
+            </div>
+            <div class="tab" onclick="showContent('interests')"> <!-- Second tab, shows interests content when clicked -->
+                Interests
+            </div>
+            <div class="tab" onclick="showContent('skills')"> <!-- Third tab, shows skills content when clicked -->
+                Skills
+            </div>
+            <div class="tab" onclick="showContent('experience')"> <!-- Fourth tab, shows experience content when clicked -->
+                Experience
+            </div>
+            <div class="tab" onclick="showContent('contact')"> <!-- Fifth tab, shows contact content when clicked -->
+                Contact
+            </div>
+        </div> <!-- Closes the sidebar -->
+        
+        <div class="content"> <!-- Main content area where tab content is displayed -->
+            <div id="about" class="content-section active"> <!-- About section, visible by default -->
+                <h2>About Me</h2> <!-- Section heading -->
+                <p>Write a personal introduction about yourself, your background, and what drives you.</p> <!-- Placeholder text for about content -->
+                <p>Share your story, personality, and what makes you unique as an individual.</p> <!-- Additional guidance for about content -->
+            </div>
+            
+            <div id="interests" class="content-section"> <!-- Interests section, hidden by default -->
+                <h2>Interests & Hobbies</h2> <!-- Section heading -->
+                <p>Describe your personal interests, hobbies, and activities you enjoy outside of work or studies.</p> <!-- Placeholder text for interests content -->
+                <p>Include both creative pursuits and recreational activities that shape who you are.</p> <!-- Additional guidance for interests content -->
+            </div>
+            
+            <div id="skills" class="content-section"> <!-- Skills section, hidden by default -->
+                <h2>Skills & Abilities</h2> <!-- Section heading -->
+                <p>List your technical skills, soft skills, and competencies.</p> <!-- Placeholder text for skills content -->
+                <p>Include programming languages, tools, creative abilities, and interpersonal skills.</p> <!-- Additional guidance for skills content -->
+            </div>
+            
+            <div id="experience" class="content-section"> <!-- Experience section, hidden by default -->
+                <h2>Work Experience</h2> <!-- Section heading -->
+                <p>Detail your professional experience, internships, and relevant work history.</p> <!-- Placeholder text for experience content -->
+                <p>Include job titles, companies, dates, and key responsibilities or achievements.</p> <!-- Additional guidance for experience content -->
+            </div>
+            
+            <div id="contact" class="content-section"> <!-- Contact section, hidden by default -->
+                <h2>Contact Information</h2> <!-- Section heading -->
+                <p>Provide ways for people to get in touch with you.</p> <!-- Placeholder text for contact content -->
+                <p>Include email, social media links, and any other preferred contact methods.</p> <!-- Additional guidance for contact content -->
+            </div>
+        </div> <!-- Closes the main content area -->
+    </div> <!-- Closes the page container -->
+    
+    <script src="script.js"></script> <!-- Links to the JavaScript file for interactive functionality -->
+</body> <!-- Closes the body section -->
+</html> <!-- Closes the HTML document -->

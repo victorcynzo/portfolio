@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- Declares this as an HTML5 document -->
+<html lang="en"> <!-- Opens the HTML document with English language attribute -->
+<head> <!-- Contains metadata about the document -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site responsive on mobile devices -->
+    <title>Academics - Victor Cornbert IJnzonides</title> <!-- Sets the browser tab title -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to the external CSS file for styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnects to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to Google Fonts static content -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- Imports JetBrains Mono font from Google Fonts -->
+</head>
+<body> <!-- Contains the visible content of the webpage -->
+    <div class="page-container"> <!-- Main container for the page layout -->
+        <div class="sidebar"> <!-- Left sidebar containing navigation tabs -->
+            <div class="tab active" onclick="showContent('education')"> <!-- First tab, active by default, shows education content when clicked -->
+                Education
+            </div>
+            <div class="tab" onclick="showContent('research')"> <!-- Second tab, shows research content when clicked -->
+                Research
+            </div>
+            <div class="tab" onclick="showContent('publications')"> <!-- Third tab, shows publications content when clicked -->
+                Publications
+            </div>
+            <div class="tab" onclick="showContent('awards')"> <!-- Fourth tab, shows awards content when clicked -->
+                Awards
+            </div>
+            <div class="tab" onclick="showContent('courses')"> <!-- Fifth tab, shows courses content when clicked -->
+                Courses
+            </div>
+        </div> <!-- Closes the sidebar -->
+        
+        <div class="content"> <!-- Main content area where tab content is displayed -->
+            <div id="education" class="content-section active"> <!-- Education section, visible by default -->
+                <h2>Education</h2> <!-- Section heading -->
+                <p>Add your educational background here. Include universities, degrees, graduation dates, and any relevant academic achievements.</p> <!-- Placeholder text for education content -->
+                <p>Example: Bachelor of Science in Computer Science, University Name, 2020-2024</p> <!-- Example format for education entries -->
+            </div>
+            
+            <div id="research" class="content-section"> <!-- Research section, hidden by default -->
+                <h2>Research</h2> <!-- Section heading -->
+                <p>Describe your research projects, methodologies, and findings here.</p> <!-- Placeholder text for research content -->
+                <p>Include any ongoing or completed research work, collaborations, and areas of interest.</p> <!-- Additional guidance for research content -->
+            </div>
+            
+            <div id="publications" class="content-section"> <!-- Publications section, hidden by default -->
+                <h2>Publications</h2> <!-- Section heading -->
+                <p>List your academic publications, papers, and articles here.</p> <!-- Placeholder text for publications content -->
+                <p>Include journal articles, conference papers, and any other scholarly work.</p> <!-- Additional guidance for publications content -->
+            </div>
+            
+            <div id="awards" class="content-section"> <!-- Awards section, hidden by default -->
+                <h2>Awards & Honors</h2> <!-- Section heading -->
+                <p>Showcase your academic awards, scholarships, and honors here.</p> <!-- Placeholder text for awards content -->
+                <p>Include dates, awarding institutions, and brief descriptions of achievements.</p> <!-- Additional guidance for awards content -->
+            </div>
+            
+            <div id="courses" class="content-section"> <!-- Courses section, hidden by default -->
+                <h2>Relevant Courses</h2> <!-- Section heading -->
+                <p>List important courses you've taken that are relevant to your field.</p> <!-- Placeholder text for courses content -->
+                <p>Include course names, institutions, and key skills or knowledge gained.</p> <!-- Additional guidance for courses content -->
+            </div>
+        </div> <!-- Closes the main content area -->
+    </div> <!-- Closes the page container -->
+    
+    <script src="script.js"></script> <!-- Links to the JavaScript file for interactive functionality -->
+</body> <!-- Closes the body section -->
+</html> <!-- Closes the HTML document -->

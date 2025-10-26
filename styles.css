@@ -1,0 +1,182 @@
+/* Reset default browser styles and set base font */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Makes padding and border included in element's total width and height */
+}
+
+/* Set the font family for the entire document */
+body {
+    font-family: 'JetBrains Mono', monospace; /* Sets JetBrains Mono as the primary font with monospace fallback */
+    background-color: black; /* Sets the background color to black */
+    color: white; /* Sets the default text color to white */
+    height: 100vh; /* Makes the body take up the full viewport height */
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+/* Main container that centers content */
+.container {
+    display: flex; /* Uses flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Takes up full viewport height */
+    width: 100vw; /* Takes up full viewport width */
+}
+
+/* The central black square with border */
+.main-square {
+    background-color: black; /* Sets background to black */
+    border: 3px solid #333; /* Creates a dark grey border that's 3 pixels thick */
+    padding: 60px; /* Adds 60 pixels of space inside the square */
+    border-radius: 10px; /* Rounds the corners slightly */
+    text-align: center; /* Centers all text inside */
+    min-width: 500px; /* Sets minimum width to prevent square from being too small */
+    min-height: 400px; /* Sets minimum height to maintain square proportions */
+}
+
+/* Styling for the name heading */
+.name {
+    font-size: 2.5rem; /* Sets font size to 2.5 times the root element size */
+    font-weight: 500; /* Sets font weight to medium */
+    margin-bottom: 50px; /* Adds 50 pixels of space below the name */
+    letter-spacing: 1px; /* Adds 1 pixel of space between letters */
+}
+
+/* Container for the three navigation boxes */
+.navigation-boxes {
+    display: flex; /* Uses flexbox layout */
+    justify-content: space-between; /* Distributes boxes evenly with space between them */
+    gap: 30px; /* Adds 30 pixels of space between each box */
+}
+
+/* Individual navigation box styling */
+.nav-box {
+    background-color: black; /* Sets background to black */
+    border: 2px solid #333; /* Creates a thin dark grey border */
+    padding: 30px 20px; /* Adds 30px top/bottom padding and 20px left/right padding */
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets text color to white */
+    border-radius: 8px; /* Rounds the corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects lasting 0.3 seconds */
+    flex: 1; /* Makes each box take equal width */
+    display: flex; /* Uses flexbox for centering text */
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    min-height: 80px; /* Sets minimum height for consistent box sizes */
+    font-weight: 400; /* Sets normal font weight */
+}
+
+/* Hover effect for navigation boxes */
+.nav-box:hover {
+    transform: scale(1.05); /* Enlarges the box by 5% when hovered */
+    border-color: #555; /* Changes border to a lighter grey on hover */
+    background-color: #111; /* Slightly lightens the background on hover */
+}
+
+/* Styling for content pages (academics, art, me) */
+.page-container {
+    display: flex; /* Uses flexbox layout */
+    height: 100vh; /* Takes up full viewport height */
+    background-color: black; /* Sets background to black */
+}
+
+/* Left sidebar containing the tabs */
+.sidebar {
+    width: 300px; /* Sets fixed width for the sidebar */
+    background-color: black; /* Sets background to black */
+    padding: 20px 0; /* Adds 20px padding top and bottom, no left/right padding */
+    overflow-y: auto; /* Allows vertical scrolling if content overflows */
+}
+
+/* Individual tab styling */
+.tab {
+    background-color: #222; /* Sets dark grey background */
+    color: white; /* Sets text color to white */
+    padding: 20px 25px; /* Adds 20px top/bottom and 25px left/right padding */
+    margin-bottom: 15px; /* Adds 15px space below each tab */
+    border-radius: 0 15px 15px 0; /* Rounds only the right corners, left side stays flat */
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+    transition: all 0.3s ease; /* Smooth transition for animations lasting 0.3 seconds */
+    border-left: none; /* Removes left border so tab hugs the screen edge */
+    font-weight: 400; /* Sets normal font weight */
+    user-select: none; /* Prevents text selection when clicking */
+}
+
+/* Hover effect for tabs */
+.tab:hover {
+    transform: scale(1.1); /* Enlarges tab by 10% when hovered */
+    background-color: #333; /* Lightens background color on hover */
+    margin-right: -10px; /* Extends the tab slightly to the right when enlarged */
+}
+
+/* Active tab styling */
+.tab.active {
+    background-color: #444; /* Sets lighter background for active tab */
+    border-right: 3px solid #666; /* Adds right border to indicate active state */
+}
+
+/* Main content area */
+.content {
+    flex: 1; /* Takes up remaining space after sidebar */
+    padding: 40px; /* Adds 40px padding on all sides */
+    background-color: black; /* Sets background to black */
+    overflow-y: auto; /* Allows vertical scrolling if content overflows */
+}
+
+/* Content sections (hidden by default) */
+.content-section {
+    display: none; /* Hides all content sections by default */
+    animation: fadeIn 0.5s ease-in; /* Applies fade-in animation when shown */
+}
+
+/* Active content section */
+.content-section.active {
+    display: block; /* Shows the active content section */
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Starts completely transparent */
+    to { opacity: 1; } /* Ends completely opaque */
+}
+
+/* Heading styles for content sections */
+.content h2 {
+    font-size: 2rem; /* Sets large font size for headings */
+    margin-bottom: 20px; /* Adds space below headings */
+    color: white; /* Ensures headings are white */
+    font-weight: 500; /* Sets medium font weight */
+}
+
+/* Paragraph styles for content */
+.content p {
+    line-height: 1.6; /* Sets line height for better readability */
+    margin-bottom: 15px; /* Adds space below paragraphs */
+    color: white; /* Ensures paragraphs are white */
+    font-weight: 300; /* Sets light font weight for body text */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .main-square { /* Adjusts main square for mobile */
+        min-width: 90%; /* Makes square responsive to screen width */
+        padding: 40px 20px; /* Reduces padding for smaller screens */
+    }
+    
+    .navigation-boxes { /* Adjusts navigation for mobile */
+        flex-direction: column; /* Stacks boxes vertically on small screens */
+        gap: 20px; /* Reduces gap between boxes */
+    }
+    
+    .name { /* Adjusts name size for mobile */
+        font-size: 2rem; /* Reduces font size for smaller screens */
+    }
+    
+    .sidebar { /* Adjusts sidebar for mobile */
+        width: 250px; /* Makes sidebar narrower on small screens */
+    }
+    
+    .content { /* Adjusts content padding for mobile */
+        padding: 20px; /* Reduces padding for smaller screens */
+    }
+}
