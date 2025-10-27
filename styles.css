@@ -160,50 +160,62 @@ body {
 
 /* Individual tab styling */
 .tab {
-    background-color: #222;
-    /* Sets dark grey background */
+    background-color: black;
+    /* Sets background to black to match navigation boxes */
     color: white;
     /* Sets text color to white */
-    padding: 20px 25px;
-    /* Adds 20px top/bottom and 25px left/right padding */
+    padding: 30px 20px;
+    /* Adds 30px top/bottom and 20px left/right padding to match navigation boxes */
     margin-bottom: 15px;
     /* Adds 15px space below each tab */
-    border-radius: 0 15px 15px 0;
-    /* Rounds only the right corners, left side stays flat */
+    border-radius: 0;
+    /* Removes rounded corners for sharp 90-degree edges like navigation boxes */
+    border: 2px solid white;
+    /* Adds white border with same thickness as navigation boxes */
+    border-left: none;
+    /* Removes left border so tabs hug the screen edge */
     cursor: pointer;
     /* Changes cursor to pointer when hovering */
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    /* Smooth transition with custom easing */
-    border-left: none;
-    /* Removes left border so tab hugs the screen edge */
+    transition: all 0.3s ease;
+    /* Smooth transition matching navigation boxes */
     font-weight: 400;
     /* Sets normal font weight */
     user-select: none;
     /* Prevents text selection when clicking */
     position: relative;
     /* Enables positioning for z-index */
-    transform-origin: left center;
-    /* Sets scaling origin to left center to preserve rounded edges */
+    transform-origin: center center;
+    /* Sets scaling origin to center for uniform enlargement */
+    min-height: 80px;
+    /* Sets same minimum height as navigation boxes */
+    display: flex;
+    /* Uses flexbox for centering text like navigation boxes */
+    align-items: center;
+    /* Centers text vertically */
+    justify-content: center;
+    /* Centers text horizontally */
 }
 
 /* Hover effect for tabs */
 .tab:hover {
-    transform: scaleX(1.25) scaleY(1.5);
-    /* Enlarges tab width by 25% and height by 50% when hovered */
-    background-color: #333;
-    /* Lightens background color on hover */
+    transform: scale(1.1);
+    /* Enlarges tab by 10% when hovered, same as navigation boxes */
+    background-color: #111;
+    /* Slightly lightens the background on hover, same as navigation boxes */
+    border-color: white;
+    /* Keeps border white on hover, same as navigation boxes */
     z-index: 10;
     /* Brings hovered tab above others to prevent overlap issues */
-    padding-left: 40px;
-    /* Moves text further to the right when hovered */
 }
 
 /* Active tab styling */
 .tab.active {
-    background-color: #444;
-    /* Sets lighter background for active tab */
-    border-right: 3px solid #666;
-    /* Adds right border to indicate active state */
+    background-color: #111;
+    /* Sets slightly lighter background for active tab */
+    border: 2px solid white;
+    /* Maintains white border for active state */
+    border-left: none;
+    /* Removes left border for active tabs too */
 }
 
 /* Main content area */
@@ -428,41 +440,42 @@ body {
 
 /* When hovering over sidebar, prepare all tabs for dynamic spacing */
 .sidebar:hover .tab {
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    /* Smooth transition for all tabs */
+    transition: all 0.3s ease;
+    /* Smooth transition for all tabs matching navigation boxes */
 }
 
 /* Push tabs below the hovered tab down to maintain consistent spacing */
 .tab:hover~.tab {
-    transform: translateY(20px);
-    /* Moves subsequent tabs down by 20px to accommodate enlarged tab */
+    transform: translateY(8px);
+    /* Moves subsequent tabs down by 8px to accommodate 10% enlarged tab */
 }
 
 /* Ensure consistent spacing by adjusting the hovered tab's position */
 .tab:hover {
-    margin-top: 10px;
-    /* Slight adjustment to maintain visual balance */
-    margin-bottom: 25px;
-    /* Increased bottom margin to create space for the enlarged tab */
+    margin-top: 4px;
+    /* Slight adjustment to maintain visual balance for smaller enlargement */
+    margin-bottom: 19px;
+    /* Adjusted bottom margin to create appropriate space for 10% enlarged tab */
 }
 
-/* Home t
-ab styling with extra spacing */
+/* Home tab styling with extra spacing */
 .home-tab {
     margin-top: 60px;
     /* Adds much more space above the home tab (equivalent to space for two tabs) */
-    background-color: #1a1a1a;
-    /* Slightly different background to distinguish it as a navigation tab */
-    border-right: 2px solid #444;
-    /* Adds a subtle right border to make it stand out */
+    background-color: black;
+    /* Same background as other tabs */
+    border: 2px solid white;
+    /* Same white border as other tabs */
+    border-left: none;
+    /* Removes left border like other tabs */
 }
 
 /* Home tab hover effect */
 .home-tab:hover {
-    background-color: #2a2a2a;
-    /* Different hover color for the home tab */
-    border-right-color: #666;
-    /* Lightens the right border on hover */
+    background-color: #111;
+    /* Same hover background as other tabs */
+    border-color: white;
+    /* Keeps border white on hover like other tabs */
     margin-top: 60px;
     /* Maintains the same top margin when hovered to keep consistent spacing */
     margin-bottom: 15px;
