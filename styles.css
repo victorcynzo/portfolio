@@ -36,6 +36,18 @@ body {
     /* Takes up full viewport width */
 }
 
+/* Container for main square and disclaimer text */
+.main-content {
+    display: flex;
+    /* Uses flexbox layout */
+    flex-direction: column;
+    /* Stacks main square and disclaimer vertically */
+    align-items: center;
+    /* Centers both elements horizontally */
+    gap: 30px;
+    /* Adds 30px space between main square and disclaimer text */
+}
+
 /* The central black square with border */
 .main-square {
     background-color: black;
@@ -480,4 +492,21 @@ body {
     /* Maintains the same top margin when hovered to keep consistent spacing */
     margin-bottom: 15px;
     /* Maintains the same bottom margin when hovered */
+}/* 
+Disclaimer text styling */
+.disclaimer-text {
+    color: white;
+    /* Sets text color to white */
+    font-size: 0.9rem;
+    /* Sets font size slightly smaller than default (navigation boxes use default 1rem) */
+    font-weight: 300;
+    /* Sets light font weight */
+    text-align: center;
+    /* Centers the text horizontally */
+    margin: 0;
+    /* Removes default paragraph margins */
+    opacity: 0.8;
+    /* Makes text slightly transparent for a subtle appearance */
+    letter-spacing: 0.5px;
+    /* Adds slight letter spacing for better readability */
 }
