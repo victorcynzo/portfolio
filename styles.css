@@ -126,6 +126,8 @@ body {
     /* Sets minimum width to ensure all boxes are the same size */
     font-weight: 400;
     /* Sets normal font weight */
+    font-size: 1.2rem;
+    /* Sets larger font size for better readability */
 }
 
 /* Hover effect for navigation boxes */
@@ -206,6 +208,8 @@ body {
     /* Centers text vertically */
     justify-content: center;
     /* Centers text horizontally */
+    font-size: 1.2rem;
+    /* Sets larger font size to match navigation boxes */
 }
 
 /* Hover effect for tabs */
@@ -492,7 +496,9 @@ body {
     /* Maintains the same top margin when hovered to keep consistent spacing */
     margin-bottom: 15px;
     /* Maintains the same bottom margin when hovered */
-}/* 
+}
+
+/* 
 Disclaimer text styling */
 .disclaimer-text {
     color: white;
