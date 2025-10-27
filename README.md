@@ -1,14 +1,18 @@
 # Victor Cornbert IJnzonides - Portfolio Website
 
-A personal portfolio website built with HTML, CSS, and JavaScript, designed to be hosted on GitHub Pages.
+A personal portfolio website built with HTML, CSS, and JavaScript, designed to be hosted on GitHub Pages. Features a modern, minimalist design with sharp geometric elements and smooth animations.
 
 ## Features
 
-- **Responsive Design**: Works on desktop and mobile devices
-- **JetBrains Mono Font**: Clean, modern monospace typography
-- **Interactive Navigation**: Smooth hover animations and tab switching
-- **Dark Theme**: Black background with dark grey accents
+- **Responsive Design**: Optimized for desktop browsers with mobile compatibility
+- **JetBrains Mono Font**: Clean, modern monospace typography throughout
+- **Interactive Navigation**: Smooth hover animations with 10% scaling effects
+- **Modern Dark Theme**: Black background with crisp white borders and accents
 - **Three Main Sections**: Academics, Art, and Me pages with tabbed content
+- **Geometric Design**: Sharp 90-degree edges and consistent rectangular elements
+- **Dynamic Tab System**: Left-side navigation tabs with hover enlargement and spacing
+- **Embedded Content**: Each tab includes links, images, and playable YouTube videos
+- **Home Navigation**: Easy return to homepage from any section
 
 ## File Structure
 
