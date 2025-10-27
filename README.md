@@ -35,34 +35,85 @@ A personal portfolio website built with HTML, CSS, and JavaScript, designed to b
 5. Choose "main" branch and "/ (root)" folder
 6. Your site will be available at: `https://yourusername.github.io/repository-name`
 
+## Design Elements
+
+### Homepage
+- **Main Container**: Large black square with thick white border (2px)
+- **Navigation Boxes**: Three equal-sized rectangular buttons with white borders
+- **Typography**: Large centered name with 1.2rem navigation text
+- **Disclaimer**: Subtle text below main container for desktop optimization
+
+### Content Pages
+- **Left Sidebar**: Vertical tab navigation with no left borders
+- **Tab Design**: Rectangular tabs with white borders, 80px minimum height
+- **Hover Effects**: 10% uniform scaling with smooth transitions
+- **Home Tab**: Special navigation tab with extra spacing to return to homepage
+- **Content Area**: Scrollable main content with embedded media
+
+### Interactive Features
+- **Tab Animations**: Smooth scaling with dynamic spacing adjustment
+- **Embedded Media**: Google links, Reddit images, and playable YouTube videos
+- **Responsive Spacing**: Tabs below hovered elements move down to maintain visual balance
+
 ## Customization
 
 ### Adjusting Hover Animation Size
 In `styles.css`, find the `.tab:hover` and `.nav-box:hover` sections and modify the `transform: scale()` values:
 - `scale(1.05)` = 5% larger
-- `scale(1.1)` = 10% larger  
+- `scale(1.1)` = 10% larger (current setting)
 - `scale(1.15)` = 15% larger
 
 ### Adding Content
 Replace the placeholder text in each HTML file with your actual content:
-- Education details in `academics.html`
-- Art projects in `art.html` 
-- Personal information in `me.html`
+- Education, research, publications, awards, and courses in `academics.html`
+- Digital art, traditional art, photography, design, and exhibitions in `art.html`
+- About, interests, skills, experience, and contact information in `me.html`
 
 ### Color Customization
 Main colors used:
 - Background: `black`
-- Borders: `#333` (dark grey)
-- Hover states: `#555` (lighter grey)
+- Borders: `white` (2px thickness throughout)
+- Hover background: `#111` (subtle lightening)
 - Text: `white`
+- Links: `white` with `#ccc` hover state
+- Disclaimer text: `white` with 80% opacity
+
+## Technical Specifications
+
+### Fonts
+- **Primary**: JetBrains Mono (Google Fonts)
+- **Weights**: 300 (light), 400 (normal), 500 (medium), 700 (bold)
+- **Sizes**: 2.5rem (name), 1.2rem (navigation/tabs), 0.9rem (disclaimer)
+
+### Animations
+- **Duration**: 0.3s for navigation elements, 0.4s for tab spacing
+- **Easing**: `ease` for navigation, `cubic-bezier(0.25, 0.46, 0.45, 0.94)` for tabs
+- **Scaling**: 10% uniform enlargement on hover
+- **Dynamic Spacing**: 8px vertical adjustment for tab positioning
+
+### Layout
+- **Viewport**: 100vh/100vw full-screen design
+- **Flexbox**: Extensive use for centering and responsive layout
+- **Sidebar Width**: 300px fixed (250px on mobile)
+- **Tab Height**: 80px minimum for consistency
+- **Border Thickness**: 2px white borders throughout
 
 ## Browser Compatibility
 
-This website works in all modern browsers including:
-- Chrome
+**Best viewed on desktop browsers**. Fully compatible with:
+- Chrome (recommended)
 - Firefox
 - Safari
 - Edge
+
+Mobile compatibility included with responsive breakpoints at 768px.
+
+## Performance Notes
+
+- **Font Loading**: Preconnected to Google Fonts for faster loading
+- **Animations**: Hardware-accelerated transforms for smooth performance
+- **Media**: YouTube videos use responsive embed containers
+- **Images**: Responsive sizing with automatic aspect ratio maintenance
 
 ## License
 
