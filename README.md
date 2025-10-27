@@ -131,6 +131,10 @@ Mobile compatibility included with responsive breakpoints at 768px.
 - **Media**: YouTube videos use responsive embed containers
 - **Images**: Responsive sizing with automatic aspect ratio maintenance
 
+## Development
+
+This website was built using **Kiro**, an AI-powered development assistant that helped create the interactive animations, responsive design, and overall architecture of the portfolio.
+
 ## License
 
 This project is open source and available under the MIT License.
