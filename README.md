@@ -49,11 +49,11 @@ A personal portfolio website built with HTML, CSS, and JavaScript, designed to b
 - **Background Animation**: Three balls (white, light grey, dark grey) moving in oscillating ellipses
 - **Ball Properties**: Large balls (18-30px radius) with extremely long trailing paths
 - **Animation Behavior**: Balls orbit at different speeds with counter-rotating white ball
-- **Left Sidebar**: Vertical tab navigation with no left borders
+- **Left Sidebar**: Vertically centered tab navigation with no left borders
 - **Tab Design**: Rectangular tabs with white borders, 80px minimum height
 - **Hover Effects**: 10% uniform scaling with smooth transitions
 - **Home Tab**: Special navigation tab with extra spacing to return to homepage
-- **Content Area**: Scrollable main content with embedded media
+- **Content Area**: Vertically centered scrollable content with embedded media
 
 ### Interactive Features
 - **Background Animation**: Elliptical ball animation appears before tab selection, disappears when content is shown
@@ -107,6 +107,7 @@ Main colors used:
 ### Layout
 - **Viewport**: 100vh/100vw full-screen design
 - **Flexbox**: Extensive use for centering and responsive layout
+- **Vertical Centering**: Both sidebar tabs and content area are vertically centered
 - **Sidebar Width**: 300px fixed (250px on mobile)
 - **Tab Height**: 80px minimum for consistency
 - **Border Thickness**: 2px white borders throughout

@@ -168,6 +168,8 @@ body {
     /* Uses flexbox layout for better tab positioning */
     flex-direction: column;
     /* Stacks tabs vertically */
+    justify-content: center;
+    /* Centers tabs vertically in the sidebar */
     position: relative;
     /* Enables positioning for overflow handling */
 }
@@ -248,6 +250,12 @@ body {
     /* Prevents horizontal scrolling */
     position: relative;
     /* Enables proper positioning */
+    display: flex;
+    /* Uses flexbox layout for centering content */
+    flex-direction: column;
+    /* Stacks content vertically */
+    justify-content: center;
+    /* Centers content vertically in the content area */
 }
 
 /* Content sections (hidden by default) */
