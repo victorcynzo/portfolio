@@ -40,8 +40,8 @@ body {
 .main-square {
     background-color: black;
     /* Sets background to black */
-    border: 12px solid #222;
-    /* Creates a very thick darker grey border that's 12 pixels thick */
+    border: 2px solid white;
+    /* Creates a white border that's 2 pixels thick, same as navigation boxes */
     padding: 60px;
     /* Adds 60 pixels of space inside the square */
     border-radius: 0;
@@ -88,8 +88,8 @@ body {
 .nav-box {
     background-color: black;
     /* Sets background to black */
-    border: 2px solid #222;
-    /* Creates a thin darker grey border */
+    border: 2px solid white;
+    /* Creates a white border that's 2 pixels thick */
     padding: 30px 20px;
     /* Adds 30px top/bottom padding and 20px left/right padding */
     text-decoration: none;
@@ -120,8 +120,8 @@ body {
 .nav-box:hover {
     transform: scale(1.1);
     /* Enlarges the box by 10% when hovered */
-    border-color: #444;
-    /* Changes border to a lighter grey on hover */
+    border-color: white;
+    /* Keeps border white on hover */
     background-color: #111;
     /* Slightly lightens the background on hover */
 }
@@ -348,8 +348,8 @@ body {
 
 /* Styling for embedded links */
 .embedded-content a {
-    color: #4a9eff;
-    /* Sets link color to a light blue */
+    color: white;
+    /* Sets link color to white */
     text-decoration: none;
     /* Removes underline from links */
     font-weight: 400;
@@ -360,8 +360,8 @@ body {
 
 /* Hover effect for embedded links */
 .embedded-content a:hover {
-    color: #66b3ff;
-    /* Lightens link color on hover */
+    color: #ccc;
+    /* Changes to light grey on hover */
     text-decoration: underline;
     /* Adds underline on hover */
 }
