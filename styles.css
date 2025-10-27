@@ -256,12 +256,20 @@ body {
     /* Hides all content sections by default */
     animation: fadeIn 0.5s ease-in;
     /* Applies fade-in animation when shown */
+    position: relative;
+    /* Ensures content appears above animation */
+    z-index: 10;
+    /* Places content above animation canvas */
+    background-color: black;
+    /* Ensures content has black background */
+    padding: 20px;
+    /* Adds padding around content */
 }
 
 /* Active content section */
 .content-section.active {
-    display: block;
-    /* Shows the active content section */
+    display: block !important;
+    /* Shows the active content section with high priority */
 }
 
 /* Default message when no tab is selected */
@@ -515,4 +523,22 @@ Disclaimer text styling */
     /* Makes text slightly transparent for a subtle appearance */
     letter-spacing: 0.5px;
     /* Adds slight letter spacing for better readability */
+}
+
+/* Elliptical ball animation canvas */
+.ellipse-animation {
+    position: absolute; /* Positions canvas absolutely within content area */
+    top: 0; /* Aligns to top of content area */
+    left: 0; /* Aligns to left of content area */
+    width: 100%; /* Takes full width of content area */
+    height: 100%; /* Takes full height of content area */
+    background-color: black; /* Sets black background for animation */
+    z-index: 1; /* Places canvas behind content but above background */
+    display: block; /* Shows animation by default */
+    pointer-events: none; /* Allows clicks to pass through to elements below */
+}
+
+/* Hide animation when content is active */
+.content-section.active ~ .ellipse-animation {
+    display: none !important; /* Hides animation when any tab content is shown */
 }
