@@ -14,7 +14,8 @@ class EllipseAnimation {
         // Animation properties
         this.animationId = null;
         this.time = 0;
-        this.trails = [[], [], []];
+        this.frameCount = 0; // Frame counter for trail spacing
+        this.trailPositions = [[], [], []]; // Store last 15 trail balls for each ball
         
         // Bounds will be initialized after canvas check
         
@@ -117,6 +118,7 @@ class EllipseAnimation {
     
     updateBalls() {
         this.time += 0.016; // Roughly 60fps
+        this.frameCount++; // Increment frame counter
         
         for (let i = 0; i < this.balls.length; i++) {
             const ball = this.balls[i];
@@ -148,17 +150,18 @@ class EllipseAnimation {
             const maxDistance = Math.max(ball.ellipseA, ball.ellipseB);
             ball.currentSpeed = (distanceFromCenter / maxDistance) * 2 + 0.5; // Range 0.5 to 2.5
             
-            // Add current position to trail
-            this.trails[i].push({ 
-                x: ball.x, 
-                y: ball.y,
-                speed: ball.currentSpeed 
-            });
+            // Add current position to trail every 16 frames (original spacing)
+            if (this.frameCount % 16 === 0) {
+                this.trailPositions[i].push({ 
+                    x: ball.x, 
+                    y: ball.y
+                });
+            }
             
-            // Dynamic trail length based on speed (150-600 points) - 15x longer than original
-            const trailLength = Math.floor(150 + ball.currentSpeed * 180);
-            while (this.trails[i].length > trailLength) {
-                this.trails[i].shift();
+            // Keep only last 15 trail balls (more balls to fill gap without changing spacing)
+            const maxTrailLength = 15;
+            while (this.trailPositions[i].length > maxTrailLength) {
+                this.trailPositions[i].shift();
             }
         }
     }
@@ -168,40 +171,39 @@ class EllipseAnimation {
         this.ctx.fillStyle = 'black';
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
         
-        // Draw trails for each ball
+        // Draw trail balls for each ball
         for (let i = 0; i < this.balls.length; i++) {
             const ball = this.balls[i];
-            const trail = this.trails[i];
+            const trailPositions = this.trailPositions[i];
             
-            if (trail.length < 2) continue;
+            if (trailPositions.length < 2) continue;
             
-            // Get RGB values for ball color
-            let r, g, b;
-            if (ball.color === 'white') {
-                r = 255; g = 255; b = 255;
-            } else if (ball.color === '#999999') {
-                r = 153; g = 153; b = 153;
-            } else if (ball.color === '#333333') {
-                r = 51; g = 51; b = 51;
-            }
-            
-            // Draw trail segments with fading opacity (reversed) and tapered width
-            for (let j = 1; j < trail.length; j++) {
-                // Opacity fades from tail end (1.0) to ball (0.1) - REVERSED
-                const progress = j / (trail.length - 1);
-                const opacity = 0.1 + (progress * 0.9); // 0.1 to 1.0
+            // Draw trail balls (excluding the current position which is the main ball)
+            for (let j = 0; j < trailPositions.length - 1; j++) {
+                const position = trailPositions[j];
                 
-                // Uniform line width throughout the entire tail
-                const lineWidth = 3; // Consistent thickness for entire trail
+                // Calculate opacity as reduction from main ball (1.0)
+                // Each trail ball is progressively more transparent
+                const trailIndex = trailPositions.length - 1 - j; // Reverse index (newest = 1, oldest = 15)
+                const opacity = Math.max(0.05, 1.0 - (trailIndex * 0.06)); // Reduce by 6% per trail ball, minimum 5%
                 
-                this.ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${opacity})`;
-                this.ctx.lineWidth = lineWidth;
-                this.ctx.lineCap = 'round';
+                // Trail balls are same size as main ball
+                const trailRadius = ball.radius;
                 
+                // Set color with opacity
+                let r, g, b;
+                if (ball.color === 'white') {
+                    r = 255; g = 255; b = 255;
+                } else if (ball.color === '#999999') {
+                    r = 153; g = 153; b = 153;
+                } else if (ball.color === '#333333') {
+                    r = 51; g = 51; b = 51;
+                }
+                
+                this.ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${opacity})`;
                 this.ctx.beginPath();
-                this.ctx.moveTo(trail[j-1].x, trail[j-1].y);
-                this.ctx.lineTo(trail[j].x, trail[j].y);
-                this.ctx.stroke();
+                this.ctx.arc(position.x, position.y, trailRadius, 0, 2 * Math.PI);
+                this.ctx.fill();
             }
         }
         
